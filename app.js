@@ -1,6 +1,7 @@
 'use strict';
 
-var app = module.exports = require('express')(),
+var express = require('express'), 
+  app = module.exports = express(),
   compression = require('compression'),
   session = require('express-session'),
   Cloudant = require('cloudant'),
@@ -40,6 +41,12 @@ if (env.logFormat !== 'off') {
 }
 
 function main() {
+  
+  var production = process.env.PRODUCTION;
+  if (!production || production === 'false') {
+    // setup static public directory
+    app.use(express.static(__dirname + '/public')); 
+  }
 
   // enable cors
   app.use(cors());   

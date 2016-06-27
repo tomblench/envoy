@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Envoy Demo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="/demo/css/envoydemo.css" media="screen,projection" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <nav class="teal lighten-2">
+    <a href="#" class="brand-logo">Todo</a>
+    <ul class="right hide-on-med-and-down">
+      <li class="loginlink"><a href="login.html">Login</a></li>
+      <li class="registerlink"><a href="register.html">Register</a></li>
+      <li class="synclink hide"><a href="Javascript:sync()"><i class="material-icons">swap_vert</i></a></li>
+      <li class="logoutlink hide"><a href="Javascript:logout()">Logout</a></li>
+    </ul>
+    <ul id="slide-out" class="side-nav">
+      <li class="loginlink"><a href="login.html">Login</a></li>
+      <li class="registerlink"><a href="register.html">Register</a></li>
+      <li class="synclink hide"><a href="Javascript:sync()"><i class="material-icons">swap_vert</i></a></li>
+      <li class="logoutlink hide"><a href="Javascript:logout()">Logout</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+  </nav>
+
+  <div id="syncprogress" class="container hide">
+    <div class="progress">
+      <div class="indeterminate"></div>
+    </div>
+  </div>
+
+  <div id="addformcontainer" class="container">
+    <div class="row">
+      <form id="addform" class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="todo" type="text" class="validate">
+            <label for="todo">Add Todo</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="list" class="container">
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/pouchdb/5.4.4/pouchdb.min.js"></script>
+  <script type="text/javascript" src="/demo/js/mustache.js"></script>
+  <script type="text/javascript" src="/demo/js/index.js"></script>
+  <script type="text/javascript" src="/demo/js/app.js"></script>
+</body>
+
+</html>
