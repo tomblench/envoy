@@ -80,6 +80,7 @@ async.series(
     init.verifyDB,
     init.verifySecurityDoc,
     init.installSystemViews,
+    init.detectBulkGet,
     auth.init
   ],
 
