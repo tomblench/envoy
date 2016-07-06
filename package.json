@@ -1,6 +1,6 @@
 {
   "name": "cloudant-envoy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A mobile backend shim to Cloudant",
   "contributors": [
     "Stefan Kruger <stefan.kruger@gmail.com>",

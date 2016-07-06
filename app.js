@@ -84,6 +84,7 @@ module.exports = function(opts) {
   async.series(
     [
       init.verifyDB,
+      init.verifyBulkGet,
       init.verifySecurityDoc,
       init.installSystemViews,
       auth.init
